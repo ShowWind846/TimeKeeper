@@ -1,0 +1,15 @@
+current directory: /Users/S099/Desktop/Dev/SampleApp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+/Users/S099/.rbenv/versions/2.7.2/bin/ruby -I /Users/S099/.rbenv/versions/2.7.2/lib/ruby/2.7.0 -r ./siteconf20210721-71144-11p6svq.rb extconf.rb
+creating Makefile
+
+current directory: /Users/S099/Desktop/Dev/SampleApp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/S099/Desktop/Dev/SampleApp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/S099/Desktop/Dev/SampleApp/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.5/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210721-71144-xajtas/bootsnap
