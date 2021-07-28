@@ -1,5 +1,6 @@
 const glob = require("glob");
 const path = require("path");
+const webpack = require('webpack');
 const { WebpackManifestPlugin } = require("webpack-manifest-plugin");
 
 module.exports = {
@@ -26,6 +27,14 @@ module.exports = {
   plugins: [
     new WebpackManifestPlugin({
       publicPath: '/packs/'
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery'
     })
-  ]
+  ],
+  devServer: {
+    contentBase: path.join(__dirname, 'frontend'),
+    port: 8080,
+    open: true,
+  }
 };

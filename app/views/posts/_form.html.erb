@@ -1,0 +1,16 @@
+<%= form_with model: @post, id: "postForm", local: true do |f| %>
+  <table class="table">
+    <tr>
+      <td width="90%">
+        <%= f.text_field :title, placeholder: "作業内容を入力して、右のスタートボタンを押してください。" %>
+        <%= f.hidden_field :start_day, value: Date.today %>
+        <%= f.hidden_field :start_time, value: Time.now %>
+      </td>
+      <td width="10%">
+        <%= f.button :type => 'submit', id: "submitBtn" do %>
+          <i class="far fa-play-circle"></i>
+        <% end %>
+      </td>
+    </tr>
+  </table>
+<% end %>

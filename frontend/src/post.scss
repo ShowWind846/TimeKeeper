@@ -1,0 +1,99 @@
+$maincolor: #EEE;
+$textcolor: #626D71;
+$subcolor: #DDBC95;
+$subtectcolor: #B38867;
+
+.page-title {
+  float: left;
+}
+.editter {
+  font-size: 22px;
+  float: right;
+}
+.post-form {
+  padding: 5px 10px;
+  background-color: #EEE;
+  width: 100%;
+  float: left;
+  .table {
+    margin-bottom: 0 !important;
+    td, th {
+      border: 0px none;
+      padding: 1px 5px !important;
+    }
+    td {
+      vertical-align: middle;
+      text-align: center;
+    }
+  }
+  #postForm {
+    float: left;
+    width: 100%;
+  }
+  #submitBtn {
+    cursor: pointer;
+    font-size: 26px;
+    border-style: none;
+  }
+  #stopBtn {
+    margin-left: 5px;
+  }
+  button {
+    line-height: unset !important;
+  }
+  input {
+    width: 100%;
+  }
+}
+.myposts {
+  padding-top: 20px;
+  clear: both;
+  a {
+    color: $textcolor;
+  }
+  table {
+    width: 100%;
+    thead th, tbody td {
+      border: 1px solid #FFF;
+    }
+    thead th {
+      color: $maincolor;
+      text-shadow: 2px 2px 2px $textcolor;
+      padding: 2px 3px;
+      text-align: center;
+      background-color: $subcolor;
+    }
+    tbody td {
+      height: 39px;
+      padding: 2px 3px;
+      text-align: center;
+      background-color: #EEE;
+    }
+  }
+  #stopBtn {
+    cursor: pointer;
+    font-size: 26px;
+    border-style: none;
+    vertical-align: bottom;
+  }
+}
+// ACTION [ SHOW ]
+.post-show {
+  width: 80%;
+  margin: 0 auto;
+  .table {
+    border: 1px solid #DDD;
+  }
+  .table tbody tr {
+    td {
+      padding: 5px 10px;
+    }
+    .tbl-title {
+      color: $maincolor;
+      text-shadow: 2px 2px 2px $textcolor;
+      text-align: center;
+      background-color: $subcolor;
+      width: 20%;
+    }
+  }
+}

@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SampleApp</title>
+    <title>TimeKeeper</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= javascript_webpack_bundle_tag('main') %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/a897026386.js" crossorigin="anonymous"></script>
   </head>
 
   <body>
+    <header>
+      <h1>TimeKeeper</h1>
+      <div id="navToggle">
+        <div>
+          <span></span> <span></span> <span></span>
+        </div>
+      </div>
+      <!-- navToggle END -->
+      <div class="nav-menu">
+        <nav>
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">MyPage</a></li>
+            <li><a href="#">Help</a></li>
+            <li>
+              <% if user_signed_in? %>
+                <a href="/users/logout">Logout</a>
+              <% else %>
+                <a href="/users/login">Login</a>
+              <% end %>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>

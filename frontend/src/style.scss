@@ -1,5 +1,19 @@
+$maincolor: #CDCDC0;
+$textcolor: #626D71;
+$subcolor: #DDBC95;
+$subtectcolor: #B38867;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: $textcolor;
+}
+main {
+  width: 100vw;
+  padding-top: 70px;
+}
+.main-content {
+  width: 90%;
+  margin: 0 auto;
 }

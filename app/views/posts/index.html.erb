@@ -1,1 +1,22 @@
-<h1>Test</h1>
+<main>
+  <div class="main-content">
+    <%# ポストページ上部 %>
+    <div class="top-section">
+      <div class="page-title">
+        <h2>My Posts</h2>
+        <%= Time.current.to_s(:datetime_mini_jp) %>
+      </div>
+      <div class="editter">
+        <i class="far fa-edit"></i>
+        <i class="far fa-trash-alt"></i>
+      </div>
+    </div>
+    <%# ポスト - 投稿フォーム %>
+    <div class="post-form">
+      <%= render partial: "form", locals: { post: @post } %>
+    </div>
+    <div class="myposts">
+      <%= render partial: "posts", locals: { posts: @posts, post: @post } %>
+    </div>
+  </div>
+</main>

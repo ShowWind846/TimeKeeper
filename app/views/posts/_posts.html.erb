@@ -1,0 +1,37 @@
+
+<table>
+  <thead>
+    <th width="40%">Date</th>
+    <th width="22%">Start</th>
+    <th width="22%">End</th>
+    <th width="16%">Stop</th>
+  </thead>
+  <% posts.each do |post| %>
+  <tbody>
+    <td>
+      <% if post.end_day == nil %>
+        <%= post.start_day %>
+      <% else %>
+        <%= link_to post_path(post.id) do %><%= post.start_day %><% end %>
+      <% end %>
+    </td>
+    <td><%= post.start_time.strftime("%H:%M") %></td>
+    <td>
+      <% if post.end_time != nil %>
+        <%= post.end_time.strftime("%H:%M") %>
+      <% end %>
+    </td>
+    <td>
+      <%= form_with model: post, url: post_path(post.id), id: "postForm" do |f| %>
+        <%= f.hidden_field :end_time, value: Time.now %>
+        <%= f.hidden_field :end_day, value: Date.today %>
+        <% if post.end_day == nil %>
+          <%= f.button :type => 'submit', id: "stopBtn" , disabled: false do %>
+            <i class="far fa-stop-circle"></i>
+          <% end %>
+        <% end %>
+      <% end %>
+    </td>
+  </tbody>
+  <% end %>
+</table>

@@ -1,0 +1,37 @@
+<main>
+  <div class="main-content">
+    <div class="post-show">
+      <div class="top-section">
+        <div class="editter">
+          <i class="far fa-edit"></i>
+          <%= link_to post_path(@post.id), method: :delete do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+          <%= link_to root_path do %>
+            <i class="far fa-arrow-alt-circle-left"></i>
+          <% end %>
+        </div>
+      </div>
+      <table class="table">
+        <tbody>
+          <tr>
+            <td class="tbl-title">開始</td>
+            <td class="tbl-content"><%= @post.start_day %> <%= @post.start_time.strftime("%H:%M") %></td>
+          </tr>
+          <tr>
+            <td class="tbl-title">終了</td>
+            <td class="tbl-content"><%= @post.end_day %> <%= @post.end_time.strftime("%H:%M") %></td>
+          </tr>
+          <tr>
+            <td class="tbl-title">作業時間</td>
+            <td class="tbl-content"><%= @post.sum_time %></td>
+          </tr>
+          <tr>
+            <td class="tbl-title">内容</td>
+            <td class="tbl-content"><%= @post.title %></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>
