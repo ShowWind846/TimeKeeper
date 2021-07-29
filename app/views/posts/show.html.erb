@@ -2,9 +2,9 @@
   <div class="main-content">
     <div class="post-show">
       <div class="top-section">
+        <div class="section-title">作業内容の詳細</div>
         <div class="editter">
-          <i class="far fa-edit"></i>
-          <%= link_to post_path(@post.id), method: :delete do %>
+          <%= button_to post_path(@post.id),id: "delete", method: :delete do %>
             <i class="far fa-trash-alt"></i>
           <% end %>
           <%= link_to root_path do %>
@@ -12,6 +12,7 @@
           <% end %>
         </div>
       </div>
+      <%# post[show]:作業内容詳細表示テーブル %>
       <table class="table">
         <tbody>
           <tr>
@@ -24,7 +25,7 @@
           </tr>
           <tr>
             <td class="tbl-title">作業時間</td>
-            <td class="tbl-content"><%= @post.sum_time %></td>
+            <td class="tbl-content"><%= @post.sum_time %>時間 <%= @post.sum_min %>分</td>
           </tr>
           <tr>
             <td class="tbl-title">内容</td>
@@ -32,6 +33,34 @@
           </tr>
         </tbody>
       </table>
+      <%# post[show]:同日の作業内容一覧テーブル %>
+      <dic class="sameday-work">
+        <div class="section-title">
+          同日(<%= @post.start_day.strftime("%m月%d日") %>)の作業内容
+        </div>
+        <table class="sameday-works-table">
+          <thead>
+            <th width="70%">作業内容</th>
+            <th width="30%">作業時間</th>
+          </thead>
+          <tbody>
+            <% @samedayPosts.each do |post| %>
+              <tr>
+                <td><%= post.title %></td>
+                <td><%= post.sum_time %>時間 <%= post.sum_min %>分</td>
+                <% @sumTime += post.sum_time %>
+                <% @sumMin += post.sum_min %>
+              </tr>
+            <% end %>
+            <tr class="sum-row">
+              <td>当日合計作業時間</td>
+              <% @sumTime += @post.sum_time %>
+              <% @sumMin += @post.sum_min %>
+              <td><%= @sumTime %>時間 <%= @sumMin %>分</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
 </main>

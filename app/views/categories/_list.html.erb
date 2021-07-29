@@ -1,0 +1,26 @@
+<table>
+  <tbody>
+    <% if @categories.size == 0 %>
+      <tr>
+        <td class="category-content">
+          <span>現在、項目が１つも設定されておりません。</span>
+        </td>
+      </tr>
+    <% else %>
+      <% categories.each do |category| %>
+        <% @count += 1 %>
+        <tr>
+          <td width="50px" align="center" class="category-count"><%= @count %></td>
+          <td class="category-content">
+            <div class="category"><%= category.category %></div>
+            <div class="delete-btn">
+              <%= button_to category_path(category.id), method: :delete do %>
+               <i class="fas fa-times"></i>
+              <% end %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>

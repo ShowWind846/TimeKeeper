@@ -1,0 +1,4 @@
+<%= form_with model: @category, local: true do |f| %>
+  <%= f.text_field :category, class: "form-control" %>
+  <%= f.submit " 追加 ", class: "btn btn-outline-success" %>
+<% end %>

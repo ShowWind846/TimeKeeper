@@ -2,13 +2,21 @@
   <table class="table">
     <tr>
       <td width="90%">
-        <%= f.text_field :title, placeholder: "作業内容を入力して、右のスタートボタンを押してください。" %>
-        <%= f.hidden_field :start_day, value: Date.today %>
-        <%= f.hidden_field :start_time, value: Time.now %>
+        <% if @categories.size == 0 %>
+          <span>現在カテゴリが設定されていません。まずはカテゴリを設定してください。</span>
+        <% else %>
+          <%= f.collection_select :title, @categories, :category, :category, class: "select-form" %>
+          <%= f.hidden_field :start_day, value: Date.today %>
+          <%= f.hidden_field :start_time, value: Time.current %>
+        <% end %>
       </td>
       <td width="10%">
-        <%= f.button :type => 'submit', id: "submitBtn" do %>
-          <i class="far fa-play-circle"></i>
+        <% if @categories.size == 0 %>
+          <i class="fas fa-exclamation-circle notification"></i>
+        <% else %>
+          <%= f.button :type => 'submit', id: "submitBtn" do %>
+            <i class="far fa-play-circle"></i>
+          <% end %>
         <% end %>
       </td>
     </tr>

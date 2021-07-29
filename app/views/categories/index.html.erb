@@ -1,0 +1,22 @@
+<main>
+  <div class="main-content">
+    <div class="category-index">
+      <%# category[index] 上部 %>
+      <div class="top-section">
+        <div class="section-title">My Categories</div>
+        <div class="pageback">
+          <%= link_to "/" do %>
+            <i class="far fa-arrow-alt-circle-left"> 戻る</i>
+          <% end %>
+        </div>
+        <div class="category-form">
+          <%= render partial: "form", locals: { category: @category } %>
+        </div>
+      </div>
+      <%# category[index] リスト %>
+      <div class="list">
+        <%= render partial: "list", locals: { categories: @categories } %>
+      </div>
+    </div>
+  </div>
+</main>

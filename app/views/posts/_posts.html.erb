@@ -1,10 +1,11 @@
 
 <table>
   <thead>
-    <th width="40%">Date</th>
-    <th width="22%">Start</th>
-    <th width="22%">End</th>
-    <th width="16%">Stop</th>
+    <th width="25%">日付</th>
+    <th width="25%">カテゴリ</th>
+    <th width="20%">開始時刻</th>
+    <th width="20%">終了時刻</th>
+    <th width="10%"></th>
   </thead>
   <% posts.each do |post| %>
   <tbody>
@@ -15,6 +16,7 @@
         <%= link_to post_path(post.id) do %><%= post.start_day %><% end %>
       <% end %>
     </td>
+    <td><%= post.title %></td>
     <td><%= post.start_time.strftime("%H:%M") %></td>
     <td>
       <% if post.end_time != nil %>
@@ -35,3 +37,4 @@
   </tbody>
   <% end %>
 </table>
+<%= paginate @posts %>

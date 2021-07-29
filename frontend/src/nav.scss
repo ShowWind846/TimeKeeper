@@ -11,7 +11,6 @@ header {
   background-color: $subcolor;
   display: table;
   .nav-menu {
-    width: 30%;
     height: 100%;
     float: right;
   }
@@ -85,17 +84,19 @@ header {
       position: absolute; /*bodyに対しての絶対位置*/
       right:0;
       top: -300px; /*通常時はビュー外*/
-      background:rgba(255,255,255,.7);
+      background:rgb(255, 255, 255);
       width:30%;
-      padding:0 10px;
+      margin:0 10px;
       transition:.5s ease-in-out;
       text-align:left;
       ul {
+        background-color: $subcolor;
         margin:0;
         li {
+          padding: 0 10px;
           display: block;
           margin: 0;
-          border-bottom: dotted 1px #fff;
+          border: dotted 1px #DDD;
           line-height: 3
         }
         li a {

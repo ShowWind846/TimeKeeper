@@ -2,6 +2,7 @@ $maincolor: #CDCDC0;
 $textcolor: #626D71;
 $subcolor: #DDBC95;
 $subtectcolor: #B38867;
+$error: #b22222;
 
 * {
   margin: 0;
@@ -16,4 +17,10 @@ main {
 .main-content {
   width: 90%;
   margin: 0 auto;
+}
+.section-title {
+  font-size: 20px;
+}
+.notification {
+  font-size: 26px;
 }

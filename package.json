@@ -4,11 +4,11 @@
   "dependencies": {
     "@rails/actioncable": "^6.0.0",
     "@rails/activestorage": "^6.0.0",
-    "@rails/ujs": "^6.0.0",
     "jquery": "^3.6.0"
   },
   "version": "0.1.0",
   "devDependencies": {
+    "@rails/ujs": "^6.1.4",
     "css-loader": "^6.2.0",
     "sass": "^1.35.2",
     "sass-loader": "^12.1.0",

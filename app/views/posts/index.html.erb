@@ -1,22 +1,26 @@
 <main>
   <div class="main-content">
-    <%# ポストページ上部 %>
-    <div class="top-section">
-      <div class="page-title">
-        <h2>My Posts</h2>
-        <%= Time.current.to_s(:datetime_mini_jp) %>
+    <div class="post-index">
+      <%# post[index] 見出し %>
+      <div class="section-title">
+          <h2>My Posts</h2>
       </div>
-      <div class="editter">
-        <i class="far fa-edit"></i>
-        <i class="far fa-trash-alt"></i>
+      <div class="top-section">
+        <span>[ 現在時刻 ]　<%= Time.current.to_s(:datetime_mini_jp) %></span>
+        <div class="editter">
+          <%= link_to categories_path do %>
+            <i class="fas fa-plus"> カテゴリを設定する</i>
+          <% end %>
+        </div>
       </div>
-    </div>
-    <%# ポスト - 投稿フォーム %>
-    <div class="post-form">
-      <%= render partial: "form", locals: { post: @post } %>
-    </div>
-    <div class="myposts">
-      <%= render partial: "posts", locals: { posts: @posts, post: @post } %>
+      <%# post[index] 投稿フォーム %>
+      <div class="post-form">
+        <%= render partial: "form", locals: { post: @post } %>
+      </div>
+      <%# post[index] 作業一覧 %>
+      <div class="myposts">
+        <%= render partial: "posts", locals: { posts: @posts, post: @post } %>
+      </div>
     </div>
   </div>
 </main>

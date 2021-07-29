@@ -22,14 +22,14 @@
       <div class="nav-menu">
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">MyPage</a></li>
-            <li><a href="#">Help</a></li>
+            <li><a href="/">ホーム</a></li>
+            <li><a href="#"　disabled>プロフィール</a></li>
+            <li><a href="#">使い方</a></li>
             <li>
               <% if user_signed_in? %>
-                <a href="/users/logout">Logout</a>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
               <% else %>
-                <a href="/users/login">Login</a>
+                <a href="/users/login">ログイン</a>
               <% end %>
             </li>
           </ul>

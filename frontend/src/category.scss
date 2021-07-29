@@ -1,0 +1,70 @@
+$maincolor: #EEE;
+$textcolor: #626D71;
+$subcolor: #DDBC95;
+$subtectcolor: #B38867;
+
+.category-index {
+  width: 60%;
+  height: 100vh;
+  margin: 0 auto;
+  // category[index] 上部
+  .top-section {
+    width: 100%;
+    height: 30px;
+    margin-bottom: 80px;
+    .section-title {
+      float: left;
+    }
+    .pageback {
+      float: right;
+    }
+    // category[index] フォーム
+    .category-form {
+      padding-top: 30px;
+      clear: both;
+      .form-control {
+        width: 80% !important;
+        float: left;
+      }
+      .btn {
+        width: 20% !important;
+        opacity: 0.7;
+      }
+    }
+  }
+  //category[index] リスト
+  .list {
+    clear: both;
+    table {
+      border-collapse: separate;
+      border-spacing: 3px 8px;
+      width: 100%;
+      tbody td {
+        padding: 5px;
+        border-radius: 10px;
+        .category {
+          float: left;
+          margin-left: 10px;
+        }
+        .delete-btn {
+          float: right;
+          margin-right: 5px;
+        }
+        button {
+          border: 0px none;
+        }
+      }
+      .category-content {
+        background-color: #EEE;
+        span {
+          margin-left: 10px;
+        }
+      }
+      .category-count {
+        color: $maincolor;
+        text-shadow: 2px 2px 2px $textcolor;
+        background-color: $subcolor;
+      }
+    }
+  }
+}

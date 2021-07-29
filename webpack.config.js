@@ -29,7 +29,10 @@ module.exports = {
       publicPath: '/packs/'
     }),
     new webpack.ProvidePlugin({
-      $: 'jquery'
+      $: 'jquery',
+      jQuery: 'jquery',
+      jquery: 'jquery',
+      "window.jQuery": 'jquery'
     })
   ],
   devServer: {
