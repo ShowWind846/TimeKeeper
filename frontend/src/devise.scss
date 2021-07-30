@@ -59,3 +59,14 @@ $error: #b22222;
     }
   }  
 }
+
+@media screen and (max-width: 400px) {
+  .devise-content {
+    width: 90%;
+    .devise-form {
+      .text-form {
+        width: 100%;
+      }
+    }
+  }
+}
