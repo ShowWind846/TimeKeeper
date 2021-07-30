@@ -11,6 +11,13 @@
   </head>
 
   <body>
+    <div class="message-area">
+      <% if notice %>
+        <p class="notice"><%= notice %></p>
+      <% elsif alert%>
+        <p class="alert"><%= alert %></p>
+      <% end %>
+    </div>
     <header>
       <h1>TimeKeeper</h1>
       <div id="navToggle">

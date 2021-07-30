@@ -57,5 +57,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # use function for this application
 gem 'dotenv-rails'
-gem 'devise'
 gem 'kaminari'
+# [devise] 関連gem
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'

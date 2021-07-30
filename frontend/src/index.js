@@ -2,6 +2,7 @@ import "./style.scss"
 import "./nav.scss"
 import "./post.scss"
 import "./category.scss"
+import "./devise.scss"
 
 import Rails from '@rails/ujs';
 Rails.start();

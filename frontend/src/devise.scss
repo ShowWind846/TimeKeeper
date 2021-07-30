@@ -1,0 +1,61 @@
+//color
+$maincolor: #CDCDC0;
+$textcolor: #626D71;
+$subcolor: #DDBC95;
+$subtectcolor: #B38867;
+$error: #b22222;
+
+.devise-content {
+  width: 80%;
+  margin: 0 auto;
+  a {
+    color: $textcolor;
+  }
+  .devise-form {
+    padding-top: 10px;
+    p {
+      margin: 3px 0px;
+    }
+    .text-form {
+      width: 50%;
+      &::placeholder {
+        font-size: 13px;
+        opacity: 0.8;
+      }
+    }
+  }
+  .submit-button {
+    padding-top: 10px;
+  }
+  .links {
+    padding-top: 20px;
+  }
+}
+
+// error
+#error_explanation {
+  border: 1px solid red;
+  border-radius: 7px;
+  display: inline-block;
+  opacity: 0.5;
+  margin-bottom: 10px;
+}
+.error-notification {
+  font-size: 14px;
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: red;
+}
+.error-content {
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 25px;
+  ul {
+    margin-bottom: 10px;
+    li {
+      color: black !important;
+    }
+  }  
+}

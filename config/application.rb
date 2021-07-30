@@ -41,5 +41,7 @@ module SampleApp
     config.active_record.default_timezone = :local
     # config.eager_load_paths << Rails.root.join("extras")
     # config.action_view.form_with_generates_remote_forms = true
+    # devise 日本語化
+    config.i18n.default_locale = :ja 
   end
 end

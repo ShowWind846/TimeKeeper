@@ -11,8 +11,8 @@ $error: #b22222;
   color: $textcolor;
 }
 main {
+  padding-top: 65px;
   width: 100vw;
-  padding-top: 70px;
 }
 .main-content {
   width: 90%;
@@ -23,4 +23,18 @@ main {
 }
 .notification {
   font-size: 26px;
+}
+.message-area {
+  .alert {
+    color: white;
+    background-color: #F08080;
+    margin-bottom: 0px !important;
+    padding: 3px 10px;
+    border-radius: 0px;
+  }
+  .notice {
+    background-color: #90EE90;
+    margin-bottom: 0px !important;
+    padding: 3px 10px;
+  }
 }
