@@ -170,3 +170,9 @@ $error: #dc143c;
     border: none;
   }
 }
+
+@media screen and (max-width: 400px) {
+  .post-show {
+    width: 100%;
+  }
+}

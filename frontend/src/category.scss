@@ -68,3 +68,9 @@ $subtectcolor: #B38867;
     }
   }
 }
+
+@media screen and (max-width: 400px) {
+  .category-index {
+    width: 90%;
+  }
+}
