@@ -21,7 +21,8 @@
   "scripts": {
     "dev": "webpack --progress",
     "watch": "webpack --progress --watch",
-    "server": "webpack-dev-server"
+    "server": "webpack-dev-server",
+    "build": "webpack --mode=production"
   },
   "description": "This README would normally document whatever steps are necessary to get the application up and running.",
   "main": "babel.config.js",
